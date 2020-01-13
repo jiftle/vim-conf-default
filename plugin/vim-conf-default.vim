@@ -40,10 +40,12 @@ set nu
 set tabstop=2 softtabstop=2 shiftwidth=2
 " 自动缩进
 set autoindent
-" 用空格代替制表符
-set expandtab
+" 用空格代替制表符，因为Makefile文件只能使用TAB
+"set expandtab
 
 " 高亮当前行
 set cursorline
+" 显示符号，空格、制表符
+set list
 
 
