@@ -37,11 +37,11 @@ set autoread
 " 显示行号
 set nu
 " 设置tabstop
-set tabstop=2 softtabstop=2 shiftwidth=2
+set tabstop=4 softtabstop=4 shiftwidth=4
 " 自动缩进
 set autoindent
-" 用空格代替制表符，因为Makefile文件只能使用TAB
-"set expandtab
+" 用空格代替制表符，因为Makefile文件只能使用TAB，使用时，自己执行命令
+set expandtab
 
 " 高亮当前行
 set cursorline
