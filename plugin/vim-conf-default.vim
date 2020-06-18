@@ -21,6 +21,10 @@ set encoding=utf-8
 " 处理backspace键不能删除问题
 set backspace=indent,eol,start
 
+" --------- 真彩色 ----------
+if has("termguicolors")
+    set termguicolors
+endif
 
 
 " ctags
