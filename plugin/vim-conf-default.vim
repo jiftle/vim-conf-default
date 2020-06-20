@@ -21,11 +21,6 @@ set encoding=utf-8
 " 处理backspace键不能删除问题
 set backspace=indent,eol,start
 
-" --------- 真彩色 ----------
-if has("termguicolors")
-    set termguicolors
-endif
-
 
 " ctags
 if has('path_extra')
@@ -43,15 +38,24 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 " 自动缩进
 set autoindent
 " 用空格代替制表符，因为Makefile文件只能使用TAB，使用时，自己执行命令
-" set expandtab
+set expandtab
  
 " 高亮当前行
 set cursorline
 
 " ---------------- 根据不同平台，设置默认的配色方案 ---------------
-if has('unix')
-  "设置默认配色方案
-  colorscheme default
+if has('mac')
+	"设置默认配色方案
+	colorscheme default
+elseif has('unix')
+	" --------- 真彩色 ----------
+	"  Mac下显示效果很差，所以注释，Deepin下颜色挺好
+"	if has("termguicolors")
+"		set termguicolors
+"	endif
+"
+	"设置默认配色方案
+	colorscheme default
 elseif has('win64')
   " win7
   colorscheme darkblue
