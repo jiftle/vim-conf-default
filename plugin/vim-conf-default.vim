@@ -43,25 +43,25 @@ set expandtab
 " 高亮当前行
 set cursorline
 
-" ---------------- 根据不同平台，设置默认的配色方案 ---------------
-if has('mac')
-	"设置默认配色方案
-	colorscheme default
-elseif has('unix')
-	" --------- 真彩色 ----------
-	"  Mac下显示效果很差，所以注释，Deepin下颜色挺好
-"	if has("termguicolors")
-"		set termguicolors
-"	endif
-"
-	"设置默认配色方案
-	colorscheme default
-elseif has('win64')
-  " win7
-  colorscheme darkblue
-elseif has('win32')
-  " xp
-  colorscheme blue
-else
-endif
+" " ---------------- 根据不同平台，设置默认的配色方案 ---------------
+" if has('mac')
+" 	"设置默认配色方案
+" 	colorscheme default
+" elseif has('unix')
+" 	" --------- 真彩色 ----------
+" 	"  Mac下显示效果很差，所以注释，Deepin下颜色挺好
+" "	if has("termguicolors")
+" "		set termguicolors
+" "	endif
+" "
+" 	"设置默认配色方案
+" 	colorscheme default
+" elseif has('win64')
+"   " win7
+"   colorscheme darkblue
+" elseif has('win32')
+"   " xp
+"   colorscheme blue
+" else
+" endif
  
