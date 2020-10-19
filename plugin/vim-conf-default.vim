@@ -21,18 +21,6 @@ set encoding=utf-8
 " 处理backspace键不能删除问题
 set backspace=indent,eol,start
 
-" " --------- 真彩色 ----------
-" if has("termguicolors")
-"     set termguicolors
-" 	
-" 	" 解决vim的Bug
-" 	if &term =~# '^screen'
-" 		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" 		let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" 	endif
-" endif
-
-
 " ctags
 if has('path_extra')
   setglobal tags-=./tags tags-=./tags; tags^=./tags;
@@ -40,8 +28,8 @@ endif
 
 " 自动读入文件，外部改动文件，vim检测到就自动读入
 set autoread
- 
- 
+
+
 " 显示行号
 set nu
 " 设置tabstop
@@ -49,15 +37,26 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 " 自动缩进
 set autoindent
 " 用空格代替制表符，因为Makefile文件只能使用TAB，使用时，自己执行命令
-" set expandtab
- 
+set expandtab
+
 " 高亮当前行
 set cursorline
 
-" ---------------- 根据不同平台，设置默认的配色方案 ---------------
-" if has('unix')
-"   "设置默认配色方案
-"   colorscheme default
+" ---------- 不开启，因为插件最后执行，会覆盖掉.vimrc中的配色设置
+" " ---------------- 根据不同平台，设置默认的配色方案 ---------------
+" if has('mac')
+" 	"设置默认配色方案
+" 	colorscheme default
+" elseif has('unix')
+"     " --------- 真彩色 ----------
+"     "  Mac下显示效果很差
+"     "  Deepin V20 显示效果差
+" "     if has("termguicolors")
+" "         set termguicolors
+" "     endif
+" 
+" 	"设置默认配色方案
+" 	colorscheme default
 " elseif has('win64')
 "   " win7
 "   colorscheme darkblue
@@ -66,4 +65,4 @@ set cursorline
 "   colorscheme blue
 " else
 " endif
- 
+
