@@ -21,10 +21,16 @@ set encoding=utf-8
 " 处理backspace键不能删除问题
 set backspace=indent,eol,start
 
-" --------- 真彩色 ----------
-if has("termguicolors")
-    set termguicolors
-endif
+" " --------- 真彩色 ----------
+" if has("termguicolors")
+"     set termguicolors
+" 	
+" 	" 解决vim的Bug
+" 	if &term =~# '^screen'
+" 		let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" 		let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" 	endif
+" endif
 
 
 " ctags
@@ -49,15 +55,15 @@ set autoindent
 set cursorline
 
 " ---------------- 根据不同平台，设置默认的配色方案 ---------------
-if has('unix')
-  "设置默认配色方案
-  colorscheme default
-elseif has('win64')
-  " win7
-  colorscheme darkblue
-elseif has('win32')
-  " xp
-  colorscheme blue
-else
-endif
+" if has('unix')
+"   "设置默认配色方案
+"   colorscheme default
+" elseif has('win64')
+"   " win7
+"   colorscheme darkblue
+" elseif has('win32')
+"   " xp
+"   colorscheme blue
+" else
+" endif
  
