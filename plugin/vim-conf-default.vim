@@ -32,6 +32,9 @@ set autoread
 
 " 显示行号
 set nu
+" 相对行号
+set relativenumber
+
 " 设置tabstop
 set tabstop=4 softtabstop=4 shiftwidth=4
 " 自动缩进
